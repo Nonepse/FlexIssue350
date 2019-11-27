@@ -16,15 +16,12 @@ struct ContentView: View {
     var body: some View {
         Button(action: {
             Alamofire.request("https://httpbin.org/get").response { _ in
-                //
+                AFHTTPSessionManager().get("https://httpbin.org/get", parameters: nil, success: { (_, _) in
+                    FLEXManager.shared()?.showExplorer()
+                }) { (_, _) in
+                    // error
+                }
             }
-            
-            AFHTTPSessionManager().get("https://httpbin.org/get", parameters: nil, success: { (_, _) in
-                FLEXManager.shared()?.showExplorer()
-            }) { (_, _) in
-                // error
-            }
-            
         }) {
             Text("Make 2 requests & show Flex")
         }
