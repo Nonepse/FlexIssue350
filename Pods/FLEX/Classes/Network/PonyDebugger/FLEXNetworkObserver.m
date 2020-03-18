@@ -291,7 +291,7 @@ didBecomeDownloadTask:(NSURLSessionDownloadTask *)downloadTask delegate:(id <NSU
         SEL swizzledSelector = [FLEXUtility swizzledSelectorForSelector:selector];
 
         Method originalResume = class_getInstanceMethod(class, selector);
-        
+
         void (^swizzleBlock)(NSURLSessionTask *) = ^(NSURLSessionTask *slf) {
             
              // iOS's internal HTTP parser finalization code is mysteriously not thread safe,

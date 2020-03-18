@@ -8,8 +8,6 @@
 
 import UIKit
 import FLEX
-import Alamofire
-import AFNetworking
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

@@ -7,8 +7,8 @@ target 'FlexIssue350' do
 
   # Pods for FlexIssue350
 
-  pod 'AFNetworking', '2.5.3'
-  pod 'Alamofire', '4.3.0'
+  pod 'AFNetworking', '2.7.0' # '3.2.1' # '2.5.3' #
+  pod 'Alamofire', '4.3.0' # '4.9.1' #
   pod 'FLEX'
 
 end
